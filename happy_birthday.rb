@@ -1,15 +1,14 @@
 # encoding: UTF-8
-def happy_birthday person
-  person.each do |name, age|
-    puts "Дорогой #{name},"
-    puts
-    puts "Поздравляем Вас с днём рождения!"
-    puts "Вам сегодня исполняется аж #{age}!"
-    puts
-    puts "Желаем успехов в лечении простатита!"
-    puts "P.S. Ничего личного, так было в задании написано"
-  end
+def happy_birthday(person)
+  puts "#{person[:greeting]}  #{person[:name]},"
+  puts
+  puts "Поздравляем Вас с днём рождения!"
+  puts "Вам сегодня исполняется аж #{person[:age]}!"
+  puts
+  puts person[:text]
+  puts
 end
 
-person = {"Борис Бритва" => 48}
-happy_birthday person
+happy_birthday(name: "Борис", greeting: "Дорогой", age: 48, text: "Желаем успехов в лечении простатита!")
+
+happy_birthday(name: "Ефросинья", greeting: "Уважаемая", age: 18, text: "Желаем успехов просто!")
